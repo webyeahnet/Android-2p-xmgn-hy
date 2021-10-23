@@ -31,14 +31,14 @@ jobs:
         run: |
           node Android-Чтосмотреть-oxumaq2.js
         env:
-          zqwzbody: ${{ secrets.ZQWZBODY }} ${{ secrets.ZQWZBODY1 }}
+          zqwzbody: ${{ secrets.ZQWZBODY }} ${{ secrets.ZQWZBODY11 }}
           zq_timebody: ${{ secrets.ZQ_TIMEBODY }}
 
       - name: '运行 【Android-Чтосмотреть-oxumaq2二】'
-        if: env.YOUTH_READ2
+        if: env.zqwzbody2
         run: |
-          node Task/Youth_Read.js
+          node Android-Чтосмотреть-oxumaq2.js
         env:
-          zqwzbody: ${{ secrets.ZQWZBODY2 }}
-          zq_timebody: ${{ secrets.ZQ_TIMEBODY5 }}
+          zqwzbody: ${{ secrets.ZQWZBODY2 }} ${{ secrets.ZQWZBODY21 }}
+          zq_timebody: ${{ secrets.ZQ_TIMEBODY2 }}
 
