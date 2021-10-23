@@ -15,7 +15,7 @@ jobs:
     env:
         zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY }}
         zqlookStartbody2: ${{ secrets.ZQLOOKSTARTBODY2 }}
-        zqlookStartbody3: ${{ secrets.ZQLOOKSTARTBODY3 }}
+        zqlookStartbody3: ${{ secrets.ZQLOOKSTARTBODY23 }}
         zqlookStartbody4: ${{ secrets.ZQLOOKSTARTBODY4 }}
     steps:
       - uses: actions/checkout@v2
