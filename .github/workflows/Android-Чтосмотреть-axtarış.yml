@@ -1,0 +1,43 @@
+name: Android-Чтосмотреть-搜索
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 35 11 * * *
+  watch:
+    types: started
+  repository_dispatch:
+    types: bean_change
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        zqsszbody: ${{ secrets.ZQSSZBODY }}
+        zqsszbody2: ${{ secrets.ZQSSZBODY2 }}
+        zqsszbody3: ${{ secrets.ZQSSZBODY3 }}
+        zqsszbody4: ${{ secrets.ZQSSZBODY4 }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【Android-Чтосмотреть-axtarış】'
+        if: env.zqsszbody
+        run: |
+          node Android-Чтосмотреть-axtarış.js
+        env:
+          zqsszbody: ${{ secrets.ZQSSZBODY }}
+          
+
+      - name: '运行 【Android-Чтосмотреть-axtarış二】'
+        if: env.YOUTH_READ2
+        run: |
+          node Task/Youth_Read.js
+        env:
+          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY2 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE }}

@@ -1,0 +1,43 @@
+name: Android-Чтосмотреть-签到
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 15 2,3 * * *
+  watch:
+    types: started
+  repository_dispatch:
+    types: bean_change
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        zqqdbody: ${{ secrets.ZQQDBODY }}
+        zqqdbody2: ${{ secrets.ZQQDBODY2 }}
+        zqqdbody3: ${{ secrets.ZQQDBODY3 }}
+        zqqdbody4: ${{ secrets.ZQQDBODY4 }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【Android-Чтосмотреть-Daxilol】'
+        if: env.zqqdbody
+        run: |
+          node Android-Чтосмотреть-Daxilol.js
+        env:
+          zqqdbody: ${{ secrets.ZQQDBODY }}
+          
+
+      - name: '运行 【Android-Чтосмотреть-Daxilol二】'
+        if: env.YOUTH_READ2
+        run: |
+          node Task/Youth_Read.js
+        env:
+          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY2 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE }}
