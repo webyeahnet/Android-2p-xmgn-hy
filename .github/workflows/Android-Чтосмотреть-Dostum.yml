@@ -2,7 +2,7 @@ name: Android-Чтосмотреть-好友
 on:
   workflow_dispatch:
   schedule:
-    - cron: 25 9,11,15 * * *
+    - cron: 15 2,5,10 * * *
   watch:
     types: started
   repository_dispatch:
