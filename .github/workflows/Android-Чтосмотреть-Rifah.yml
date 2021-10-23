@@ -34,25 +34,10 @@ jobs:
           zq_cookie: ${{ secrets.ZQ_COOKIE }} ${{ secrets.ZQ_COOKIE2 }}
 
       - name: '运行 【Android-Чтосмотреть-Rifah二】'
-        if: env.YOUTH_READ2
+        if: env.zq_cookie2
         run: |
-          node Task/Youth_Read.js
+          node Android-Чтосмотреть-Rifah.js
         env:
-          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY2 }}
           zq_cookie: ${{ secrets.ZQ_COOKIE2 }}
 
-      - name: '运行 【Android-Чтосмотреть-Rifah三】'
-        if: env.YOUTH_READ3
-        run: |
-          node Task/Youth_Read.js
-        env:
-          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY3 }}
-          zq_cookie: ${{ secrets.ZQ_COOKIE3 }}
-
-      - name: '运行 【Android-Чтосмотреть-Rifah四】'
-        if: env.YOUTH_READ4
-        run: |
-          node Task/Youth_Read.js
-        env:
-          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY4 }}
-          zq_cookie: ${{ secrets.ZQ_COOKIE4 }}
+    
