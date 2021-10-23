@@ -15,7 +15,7 @@ jobs:
     env:
         zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY }}
         zqlookStartbody2: ${{ secrets.ZQLOOKSTARTBODY2 }}
-        zqlookStartbody3: ${{ secrets.ZQLOOKSTARTBODY23 }}
+        zqlookStartbody3: ${{ secrets.ZQLOOKSTARTBODY3 }}
         zqlookStartbody4: ${{ secrets.ZQLOOKSTARTBODY4 }}
     steps:
       - uses: actions/checkout@v2
@@ -39,8 +39,8 @@ jobs:
         run: |
           node Android-Чтосмотреть-birbaxın.js
         env:
-          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY2 }} ${{ secrets.ZQLOOKSTARTBODY21 }} ${{ secrets.ZQLOOKSTARTBODY22 }} 
-          zq_cookie: ${{ secrets.ZQ_COOKIE2 }}
+          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY2 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE }}
 
       - name: '运行 【Android-Чтосмотреть-birbaxın三】'
         if: env.zqlookStartbody3
