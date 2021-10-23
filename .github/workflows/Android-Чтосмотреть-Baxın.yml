@@ -27,4 +27,4 @@ jobs:
           node Android-Чтосмотреть-Baxın.js
 
         env:
-          zqllzbody: ${{ secrets.ZQLLZBODY }}
+          zqllzbody: ${{ secrets.ZQLLZBODY }} ${{ secrets.ZQLLZBODY2 }}
