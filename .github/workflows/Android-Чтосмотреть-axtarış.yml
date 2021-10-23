@@ -2,7 +2,7 @@ name: Android-Чтосмотреть-搜索
 on:
   workflow_dispatch:
   schedule:
-    - cron: 35 11 * * *
+    - cron: 35 10 * * *
   watch:
     types: started
   repository_dispatch:
