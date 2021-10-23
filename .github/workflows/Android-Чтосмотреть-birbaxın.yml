@@ -55,5 +55,5 @@ jobs:
         run: |
           node Android-Чтосмотреть-birbaxın.js
         env:
-          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY4 }} 
+          zqlookStartbody: ${{ secrets.ZQLOOKSTARTBODY4 }} ${{ secrets.ZQLOOKSTARTBODY41 }} ${{ secrets.ZQLOOKSTARTBODY42 }}
           zq_cookie: ${{ secrets.ZQ_COOKIE2 }}
