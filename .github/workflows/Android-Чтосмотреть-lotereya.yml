@@ -2,7 +2,7 @@ name: Android-Чтосмотреть-抽奖
 on:
   workflow_dispatch:
   schedule:
-    - cron: 34 19 * * *
+    - cron: 34 14 * * *
   watch:
     types: started
   repository_dispatch:
