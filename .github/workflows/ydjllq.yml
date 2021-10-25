@@ -33,11 +33,10 @@ jobs:
         env:
           zqerciboxbodyy: ${{ secrets.ZQBOXBODY }}
           
-
-      - name: '运行 【zq_5_60二】'
+      - name: '运行 【zq_5_60】'
         if: env.zqerciboxbody2
         run: |
           node zq_5_60.js
         env:
-          zqerciboxbody: ${{ secrets.ZQERCIBOXBOD2 }}
+          zqerciboxbodyy: ${{ secrets.ZQBOXBODY2 }}
         
