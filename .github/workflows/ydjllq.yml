@@ -14,9 +14,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         zqerciboxbody: ${{ secrets.ZQERCIBOXBODY }}
-        zqerciboxbody2: ${{ secrets.ZQERCIBOXBOD2 }}
-        zqerciboxbody3: ${{ secrets.ZQERCIBOXBOD3 }}
-        zqerciboxbody4: ${{ secrets.ZQERCIBOXBOD4 }}
+        zqerciboxbody2: ${{ secrets.ZQERCIBOXBODY2 }}
+        zqerciboxbody3: ${{ secrets.ZQERCIBOXBODY3 }}
+        zqerciboxbody4: ${{ secrets.ZQERCIBOXBODY4 }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -31,12 +31,12 @@ jobs:
         run: |
           node zq_5_60.js
         env:
-          zqerciboxbodyy: ${{ secrets.ZQBOXBODY }}
+          zqerciboxbody: ${{ secrets.ZQBOXBODY }}
           
       - name: '运行 【zq_5_60二】'
         if: env.zqerciboxbody2
         run: |
           node zq_5_60.js
         env:
-          zqerciboxbodyy: ${{ secrets.ZQBOXBODY2 }}
+          zqerciboxbody: ${{ secrets.ZQBOXBODY2 }}
         
