@@ -1,8 +1,8 @@
-name: Android-Чтосмотреть-阅读奖励领取
+name: Android-Чтосмотреть-阅读奖励
 on:
   workflow_dispatch:
   schedule:
-    - cron: 1 3,11 * * *
+    - cron: 1 3，11 * * *
   watch:
     types: started
   repository_dispatch:
@@ -12,6 +12,11 @@ jobs:
 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        zqerciboxbody: ${{ secrets.ZQERCIBOXBODY }}
+        zqerciboxbody2: ${{ secrets.ZQERCIBOXBOD2 }}
+        zqerciboxbody3: ${{ secrets.ZQERCIBOXBOD3 }}
+        zqerciboxbody4: ${{ secrets.ZQERCIBOXBOD4 }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -22,8 +27,17 @@ jobs:
         run: |
           npm install
       - name: '运行 【zq_5_60】'
+        if: env.zqerciboxbody
         run: |
-          
           node zq_5_60.js
         env:
-          zqerciboxbody: ${{ secrets.ZQERCIBOXBODY }} ${{ secrets.ZQERCIBOXBODY2 }}
+          zqerciboxbodyy: ${{ secrets.ZQBOXBODY }}
+          
+
+      - name: '运行 【zq_5_60二】'
+        if: env.zqerciboxbody2
+        run: |
+          node zq_5_60.js
+        env:
+          zqerciboxbody: ${{ secrets.ZQERCIBOXBOD2 }}
+        
