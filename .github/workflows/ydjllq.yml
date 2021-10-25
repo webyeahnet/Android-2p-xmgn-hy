@@ -2,7 +2,7 @@ name: Android-Чтосмотреть-阅读奖励领取
 on:
   workflow_dispatch:
   schedule:
-    - cron: 1 11 * * *
+    - cron: 1 3,11 * * *
   watch:
     types: started
   repository_dispatch:
@@ -26,4 +26,4 @@ jobs:
           
           node zq_5_60.js
         env:
-          zqerciboxbody: ${{ secrets.zqerciboxbody }}
+          zqerciboxbody: ${{ secrets.ZQERCIBOXBODY }}
