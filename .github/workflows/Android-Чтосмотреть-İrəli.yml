@@ -31,11 +31,11 @@ jobs:
         run: |
           node Android-Чтосмотреть-İrəli.js
         env:
-          zq_cookie: ${{ secrets.ZQ_COOKIE }} ${{ secrets.ZQ_COOKIE11 }} ${{ secrets.ZQ_COOKIE2 }} ${{ secrets.ZQ_COOKIE21 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE }} & ${{ secrets.ZQ_COOKIE11 }}
 
       - name: '运行 【Android-Чтосмотреть-İrəli二】'
         if: env.zq_cookie2
         run: |
           node Android-Чтосмотреть-İrəli.js
         env:
-          zq_cookie: ${{ secrets.ZQ_COOKIE2 }} ${{ secrets.ZQ_COOKIE }}  ${{ secrets.ZQ_COOKIE11 }} ${{ secrets.ZQ_COOKIE21 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE2 }} & ${{ secrets.ZQ_COOKIE21 }}
