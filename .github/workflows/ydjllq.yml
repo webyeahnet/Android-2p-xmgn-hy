@@ -38,5 +38,5 @@ jobs:
         run: |
           node zq_5_60.js
         env:
-          zqerciboxbody: ${{ secrets.ZQERCIBOXBODY2 }} ${{ secrets.ZQERCIBOXBODY }}
+          zqerciboxbody: ${{ secrets.ZQERCIBOXBODY2 }}
         
