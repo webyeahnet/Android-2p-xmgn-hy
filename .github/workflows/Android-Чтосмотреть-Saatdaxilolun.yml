@@ -31,13 +31,13 @@ jobs:
         run: |
           node Android-Чтосмотреть-Saatdaxilolun.js
         env:
-          zq_cookie: ${{ secrets.ZQ_COOKIE }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE11 }}
           
       - name: '运行 【Android-Чтосмотреть-Saatdaxilolun二】'
         if: env.zq_cookie2
         run: |
           node Android-Чтосмотреть-Saatdaxilolun.js
         env:
-          zq_cookie: ${{ secrets.ZQ_COOKIE2 }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE21 }}
 
       
