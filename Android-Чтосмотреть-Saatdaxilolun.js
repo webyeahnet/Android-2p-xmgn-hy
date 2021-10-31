@@ -44,7 +44,7 @@ Object.keys(zq_cookies).forEach((item) => {
                 cookie_id = cookie.replace(/zqkey_id=/, "cookie_id=")
                 zq_cookie1= cookie_id  +'&device_brand=xfdg&device_id=cc7dgdsgfsz83e&device_model=1gx&device_platform=android&device_type=android&inner_version=202107261526&mi=0&openudid=cc7dgdsgfsz83e&os_api=27&os_version=bdftgsdfga&phone_network=WIFI&phone_sim=1'+'&request_time=' + time1 +'&time=' + time1 +'&'+ bodyVal
                 //console.log(`${zq_cookie1}`)
-                if(hour >= 0 ){
+                if(hour < 21 ){
                 console.log(`--------第 ${k + 1} 个账号早起打卡报名中--------\n`)
                 await signup()
                 console.log("\n\n")
@@ -53,7 +53,7 @@ Object.keys(zq_cookies).forEach((item) => {
                     }
                 await $.wait(3000)
 
-                } else if(hour >= 21 && hour < 24){
+                } else if(hour >= 21 && hour < 23){
                     console.log(`--------第 ${k + 1} 个账号早起打卡中--------\n`)
                     await wakeup()
                     console.log("\n\n")
