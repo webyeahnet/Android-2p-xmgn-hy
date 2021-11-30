@@ -25,8 +25,8 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【zq_5_60】'
-        if: env.zqerciboxbody
+      - name: '运行 【zq_share_read】'
+        if: env.zqkdCookie
         run: |
           node zq_share_read.js
         env:
