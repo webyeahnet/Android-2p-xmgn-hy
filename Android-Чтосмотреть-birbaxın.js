@@ -124,7 +124,7 @@ Object.keys(zqlookStartbodys).forEach((item) => {
             }
 
 
-function openbox(id,zq_cookie1,timeout=0) {
+function openbox(id,zq_cookie1,timeout=120000) {
     return new Promise((resolve) => {
         let url = {
             url : 'https://kandian.wkandian.com/WebApi/Nameless/getBoxReward?id='+ id + '&' + zq_cookie1,
@@ -184,7 +184,7 @@ if ($request.url.match(/\/kandian.wkandian.com\/v5\/nameless\/adlickstart/)) {
 
   }
 //看看赚激活
-function lookStart(timeout = 0) {
+function lookStart(timeout = 120000) {
     return new Promise((resolve) => {
         let url = {
             url : 'https://kandian.wkandian.com/v5/nameless/adlickstart.json',
@@ -212,7 +212,8 @@ function lookStart(timeout = 0) {
 
                 }else{
                     console.log('\n激活看看赚任务失败')
-                   
+                    smbody = $.getdata('zqlookStartbody').replace(zqlookStartbody1 + "&", "");
+                    $.setdata(smbody, 'zqlookStartbody');
                     console.log("该看看赚任务已自动删除")
                 }
             } catch (e) {
@@ -223,7 +224,7 @@ function lookStart(timeout = 0) {
     })
 }
 //看看赚阅读
-function lookstart(timeout = 0) {
+function lookstart(timeout = 120000) {
     return new Promise((resolve) => {
         let url = {
             url : 'https://kandian.wkandian.com/v5/nameless/bannerstatus.json',
@@ -247,7 +248,7 @@ function lookstart(timeout = 0) {
     })
 }
 //看看赚奖励
-function reward(timeout = 0) {
+function reward(timeout = 120000) {
     return new Promise((resolve) => {
         let url = {
             url : 'https://kandian.wkandian.com/v5/nameless/adlickend.json',
