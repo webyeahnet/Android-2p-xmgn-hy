@@ -1,4 +1,4 @@
-name: Android-Чтосмотреть-阅读奖励
+name: Android-Чтосмотреть-分享阅读
 on:
   workflow_dispatch:
   schedule:
