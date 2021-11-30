@@ -5,7 +5,7 @@
 
 const jsname = '中青看点分享阅读'
 const $ = Env(jsname)
-const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
+const notifyFlag = 0; //0为关闭通知，1为打开通知,默认为1
 const logDebug = 0
 
 //const notify = $.isNode() ? require('./sendNotify') : '';
@@ -20,7 +20,7 @@ let zqkdCookieArr = []
 let userCk = ''
 let readCount = 0
 
-let zqkdShareNum = ($.isNode() ? process.env.zqkdShareNum : $.getdata('zqkdShareNum')) || 3;
+let zqkdShareNum = ($.isNode() ? process.env.zqkdShareNum : $.getdata('zqkdShareNum')) || 5;
 
 let newsItem = ''
 let UserAgent = ''
@@ -101,7 +101,7 @@ async function showmsg() {
 
 async function checkEnv() {
     
-    if(zqkdShareNum == 0) {
+    if(zqkdShareNum == 10) {
         console.log('当前分享次数设置为0。如果需要开启分享阅读，请设置环境变量zqkdShareNum为要被阅读的次数。')
         return false
     }
