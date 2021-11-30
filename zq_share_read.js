@@ -20,7 +20,7 @@ let zqkdCookieArr = []
 let userCk = ''
 let readCount = 0
 
-let zqkdShareNum = ($.isNode() ? process.env.zqkdShareNum : $.getdata('zqkdShareNum')) || 5;
+let zqkdShareNum = ($.isNode() ? process.env.zqkdShareNum : $.getdata('zqkdShareNum')) || 3;
 
 let newsItem = ''
 let UserAgent = ''
@@ -101,7 +101,7 @@ async function showmsg() {
 
 async function checkEnv() {
     
-    if(zqkdShareNum == 10) {
+    if(zqkdShareNum == 3) {
         console.log('当前分享次数设置为0。如果需要开启分享阅读，请设置环境变量zqkdShareNum为要被阅读的次数。')
         return false
     }
