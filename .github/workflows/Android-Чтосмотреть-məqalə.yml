@@ -2,7 +2,7 @@ name: Android-Чтосмотреть-翻倍
 on:
   workflow_dispatch:
   schedule:
-    - cron: 01 21 * * 1
+    - cron: 01 4 * * 1
   watch:
     types: started
   repository_dispatch:
