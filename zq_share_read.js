@@ -60,7 +60,7 @@ let si = ''
                     let factor = seedFactor > maxWaitTime ? maxWaitTime : seedFactor
                     let randomTime = Math.floor(Math.random()*factor) + 1000
                     let second = Math.floor(randomTime/1000)
-                    UserAgent = `Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x1800102c) NetType/WIFI Language/zh_CN`
+                    UserAgent = `Dalvik/2.1.0 (Linux; U; Android 8.0.0; Mi 5sPlus MIUI/V10.2.4.0.0BGMIXM)`
                     si = randomString(32)
                     console.log(`--随机延迟${second}秒后开始模拟第${readCount}次分享阅读`)
                     await $.wait(randomTime)
