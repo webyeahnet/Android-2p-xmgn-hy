@@ -60,7 +60,7 @@ let si = ''
                     let factor = seedFactor > maxWaitTime ? maxWaitTime : seedFactor
                     let randomTime = Math.floor(Math.random()*factor) + 1000
                     let second = Math.floor(randomTime/1000)
-                    UserAgent = `Dalvik/2.1.0 (Linux; U; Android 8.0.0; Mi 5sPlus MIUI/V10.2.4.0.0BGMIXM)`
+                    UserAgent = `Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x1800102c) NetType/WIFI Language/zh_CN`
                     si = randomString(32)
                     console.log(`--随机延迟${second}秒后开始模拟第${readCount}次分享阅读`)
                     await $.wait(randomTime)
@@ -101,7 +101,7 @@ async function showmsg() {
 
 async function checkEnv() {
     
-    if(zqkdShareNum == 10) {
+    if(zqkdShareNum == 15) {
         console.log('当前分享次数设置为0。如果需要开启分享阅读，请设置环境变量zqkdShareNum为要被阅读的次数。')
         return false
     }
@@ -319,6 +319,7 @@ function safeGet(data,caller) {
 function printCaller(){
     return (new Error()).stack.split("\n")[2].trim().split(" ")[1]
 }
+
 
 function Env(t, e) {
     class s {
