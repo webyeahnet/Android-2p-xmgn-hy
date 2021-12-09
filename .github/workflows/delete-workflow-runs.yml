@@ -1,6 +1,6 @@
 # This workflow prunes old workflow runs for an entire repository.
 
-name: Workflow Run Pruner
+name: 删除历史运行日志
 
 on:
   schedule:
@@ -57,16 +57,21 @@ jobs:
           // because we track the duration of runs over time
 
           const workflows = [
-            'aws_ami_builder.yml',
-            'aws_ec2_rebooter.yml',
-            'aws_ec2_terminator.yml',
-            'code_coverage.yml',
-            'docker_staging.yml',
-            'github_release.yml',
-            'qa_branch_updater.yml',
-            'sonar-scanner.yml',
-            'test_flaky.yml',
-            'workflow_run_pruner.yml'
+            'Android-Чтосмотреть-Baxın.yml',
+            'Android-Чтосмотреть-Daxilol.yml',
+            'Android-Чтосмотреть-Dostum.yml',
+            'Android-Чтосмотреть-Rifah.yml',
+            'Android-Чтосмотреть-Saatdaxilolun.yml',
+            'Android-Чтосмотреть-Xəzinəsandığı.yml',
+            'Android-Чтосмотреть-axtarış.yml',
+            'Android-Чтосмотреть-birbaxın.yml',
+            'Android-Чтосмотреть-gəlir.yml',
+            'Android-Чтосмотреть-lotereya.yml'
+            'Android-Чтосмотреть-məqalə.yml'
+            'Android-Чтосмотреть-oxumaq2.yml'
+            'Android-Чтосмотреть-İrəli.yml'
+            'ydfx.yml'
+            'ydjllq.yml'
           ]
 
           let runs_to_delete = [];
