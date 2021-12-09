@@ -58,20 +58,20 @@ jobs:
 
           const workflows = [
             'Android-Чтосмотреть-Baxın.yml',
-                        'Android-Чтосмотреть-Daxilol.yml',
-                        'Android-Чтосмотреть-Dostum.yml',
-                        'Android-Чтосмотреть-Rifah.yml',
-                        'Android-Чтосмотреть-Saatdaxilolun.yml',
-                        'Android-Чтосмотреть-Xəzinəsandığı.yml',
-                        'Android-Чтосмотреть-axtarış.yml',
-                        'Android-Чтосмотреть-birbaxın.yml',
-                        'Android-Чтосмотреть-gəlir.yml',
-                        'Android-Чтосмотреть-lotereya.yml'
-                        'Android-Чтосмотреть-məqalə.yml'
-                        'Android-Чтосмотреть-oxumaq2.yml'
-                        'Android-Чтосмотреть-İrəli.yml'
-                        'ydfx.yml'
-                        'ydjllq.yml'
+            'Android-Чтосмотреть-Daxilol.yml',
+            'Android-Чтосмотреть-Dostum.yml',
+            'Android-Чтосмотреть-Rifah.yml',
+            'Android-Чтосмотреть-Saatdaxilolun.yml',
+            'Android-Чтосмотреть-Xəzinəsandığı.yml',
+            'Android-Чтосмотреть-axtarış.yml',
+            'Android-Чтосмотреть-birbaxın.yml',
+            'Android-Чтосмотреть-gəlir.yml',
+            'Android-Чтосмотреть-lotereya.yml'
+            'Android-Чтосмотреть-məqalə.yml'
+            'Android-Чтосмотреть-oxumaq2.yml'
+            'Android-Чтосмотреть-İrəli.yml'
+            'ydfx.yml'
+            'ydjllq.yml'
           ]
 
           let runs_to_delete = [];
