@@ -1,6 +1,6 @@
 # This workflow prunes old workflow runs for an entire repository.
 
-name: 删除历史运行日志
+name: name: 删除历史运行日志
 
 on:
   workflow_dispatch:
@@ -20,14 +20,14 @@ jobs:
         script: |
           const cancelled = await github.actions.listWorkflowRunsForRepo({
             owner: context.repo.owner,
-            per_page: 2,
+            per_page: 100,
             repo: context.repo.repo,
             status: 'cancelled',
           });
 
           const skipped = await github.actions.listWorkflowRunsForRepo({
             owner: context.repo.owner,
-            per_page: 2,
+            per_page: 100,
             repo: context.repo.repo,
             status: 'skipped',
           });
@@ -43,15 +43,15 @@ jobs:
             }
           }
 
-    - name: Prune runs older than 1 days
+    - name: Prune runs older than 30 days
       uses: actions/github-script@v4
       with:
         github-token: ${{ secrets.PAT }}
         script: |
-          const days_to_expiration = 1;
+          const days_to_expiration = 30;
           const ms_in_day = 86400000;
           const now = Date.now();
-          const pages = 2;
+          const pages = 5;
 
           // we don't want to prune old runs from test.yml
           // because we track the duration of runs over time
@@ -81,7 +81,7 @@ jobs:
               let response = await github.actions.listWorkflowRuns({
                 owner: context.repo.owner,
                 page: page,
-                per_page: 2,
+                per_page: 100,
                 repo: context.repo.repo,
                 workflow_id: workflow
               });
