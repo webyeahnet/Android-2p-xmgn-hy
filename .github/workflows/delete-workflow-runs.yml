@@ -4,7 +4,7 @@ name: Workflow Run Pruner
 
 on:
   schedule:
-  - cron: '0 0 * * *'  # GMT
+  - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
     - name: Prune cancelled/skipped runs
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.GH_ACTIONS_PERSONAL_ACCESS_TOKEN }}
+        github-token: ${{ secrets.PAT }}
         script: |
           const cancelled = await github.actions.listWorkflowRunsForRepo({
             owner: context.repo.owner,
@@ -46,7 +46,7 @@ jobs:
     - name: Prune runs older than 30 days
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.GH_ACTIONS_PERSONAL_ACCESS_TOKEN }}
+        github-token: ${{ secrets.PAT }}
         script: |
           const days_to_expiration = 30;
           const ms_in_day = 86400000;
