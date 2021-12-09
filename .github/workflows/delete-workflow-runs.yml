@@ -43,12 +43,12 @@ jobs:
             }
           }
 
-    - name: Prune runs older than 30 days
+    - name: Prune runs older than 3 days
       uses: actions/github-script@v4
       with:
         github-token: ${{ secrets.PAT }}
         script: |
-          const days_to_expiration = 30;
+          const days_to_expiration = 3;
           const ms_in_day = 86400000;
           const now = Date.now();
           const pages = 5;
@@ -66,6 +66,12 @@ jobs:
             'Android-Чтосмотреть-axtarış.yml',
             'Android-Чтосмотреть-birbaxın.yml',
             'Android-Чтосмотреть-gəlir.yml',
+            'Android-Чтосмотреть-lotereya.yml'
+            'Android-Чтосмотреть-məqalə.yml'
+            'Android-Чтосмотреть-oxumaq2.yml'
+            'Android-Чтосмотреть-İrəli.yml'
+            'ydfx.yml'
+            'ydjllq.yml'
             'delete-workflow-runs.yml'
           ]
 
