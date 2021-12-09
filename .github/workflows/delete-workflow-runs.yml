@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete_workflow_runs
-        uses: smallprogram/delete-workflow-runs@master
+        uses: ActionsRML/delete-workflow-runs@master
         with:
           token: ${{ secrets.PAT }}
-          repository: ${{ github.Android-2p-xmgn-hy }}
+          repository: ${{ github.repository }}
           retain_days: 2
           keep_minimum_runs: 6
