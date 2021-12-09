@@ -1,6 +1,6 @@
 # This workflow prunes old workflow runs for an entire repository.
 
-name: name: 删除历史运行日志
+name: 删除历史运行日志
 
 on:
   workflow_dispatch:
