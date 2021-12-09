@@ -66,6 +66,12 @@ jobs:
             'Android-Чтосмотреть-axtarış.yml',
             'Android-Чтосмотреть-birbaxın.yml',
             'Android-Чтосмотреть-gəlir.yml',
+            'Android-Чтосмотреть-lotereya.yml'
+            'Android-Чтосмотреть-məqalə.yml'
+            'Android-Чтосмотреть-oxumaq2.yml'
+            'Android-Чтосмотреть-İrəli.yml'
+            'ydfx.yml'
+            'ydjllq.yml'
             'delete-workflow-runs.yml'
           ]
 
