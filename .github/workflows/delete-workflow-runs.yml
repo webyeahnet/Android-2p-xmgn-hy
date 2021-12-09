@@ -1,11 +1,11 @@
 # This workflow prunes old workflow runs for an entire repository.
 
-name: 删除历史运行日志
+name: Workflow Run Pruner
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'
+  - cron: '0 0 * * *'  # GMT
+  workflow_dispatch:
 
 jobs:
   prune:
@@ -16,7 +16,7 @@ jobs:
     - name: Prune cancelled/skipped runs
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.PAT }}
+        github-token: ${{ secrets.GH_ACTIONS_PERSONAL_ACCESS_TOKEN }}
         script: |
           const cancelled = await github.actions.listWorkflowRunsForRepo({
             owner: context.repo.owner,
@@ -46,7 +46,7 @@ jobs:
     - name: Prune runs older than 30 days
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.PAT }}
+        github-token: ${{ secrets.GH_ACTIONS_PERSONAL_ACCESS_TOKEN }}
         script: |
           const days_to_expiration = 30;
           const ms_in_day = 86400000;
@@ -57,21 +57,16 @@ jobs:
           // because we track the duration of runs over time
 
           const workflows = [
-            'Android-Чтосмотреть-Baxın.yml',
-            'Android-Чтосмотреть-Daxilol.yml',
-            'Android-Чтосмотреть-Dostum.yml',
-            'Android-Чтосмотреть-Rifah.yml',
-            'Android-Чтосмотреть-Saatdaxilolun.yml',
-            'Android-Чтосмотреть-Xəzinəsandığı.yml',
-            'Android-Чтосмотреть-axtarış.yml',
-            'Android-Чтосмотреть-birbaxın.yml',
-            'Android-Чтосмотреть-gəlir.yml',
-            'Android-Чтосмотреть-lotereya.yml'
-            'Android-Чтосмотреть-məqalə.yml'
-            'Android-Чтосмотреть-oxumaq2.yml'
-            'Android-Чтосмотреть-İrəli.yml'
-            'ydfx.yml'
-            'ydjllq.yml'
+            'aws_ami_builder.yml',
+            'aws_ec2_rebooter.yml',
+            'aws_ec2_terminator.yml',
+            'code_coverage.yml',
+            'docker_staging.yml',
+            'github_release.yml',
+            'qa_branch_updater.yml',
+            'sonar-scanner.yml',
+            'test_flaky.yml',
+            'workflow_run_pruner.yml'
           ]
 
           let runs_to_delete = [];
