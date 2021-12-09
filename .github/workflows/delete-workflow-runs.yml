@@ -4,7 +4,7 @@ name: 删除历史运行日志
 
 on:
   schedule:
-  - cron: '0 16 * * *'
+  - cron: '0 0 * * *'  # GMT
   workflow_dispatch:
 
 jobs:
@@ -66,12 +66,7 @@ jobs:
             'Android-Чтосмотреть-axtarış.yml',
             'Android-Чтосмотреть-birbaxın.yml',
             'Android-Чтосмотреть-gəlir.yml',
-            'Android-Чтосмотреть-lotereya.yml'
-            'Android-Чтосмотреть-məqalə.yml'
-            'Android-Чтосмотреть-oxumaq2.yml'
-            'Android-Чтосмотреть-İrəli.yml'
-            'ydfx.yml'
-            'ydjllq.yml'
+            'delete-workflow-runs.yml'
           ]
 
           let runs_to_delete = [];
