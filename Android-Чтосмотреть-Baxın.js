@@ -113,8 +113,7 @@ function Start(timeout = 0) {
 
                 else{
                     console.log('\n激活浏览赚任务失败')
-                    smbody = $.getdata('zqllzbody').replace(zqllzbody1 + "&", "");
-                    $.setdata(smbody, 'zqllzbody');
+                   
                     console.log("该浏览赚任务已自动删除")
                 }
             } catch (e) {
