@@ -119,8 +119,7 @@ function Start(timeout = 0) {
 
                 else{
                     console.log('\n激活搜索赚任务失败')
-                    smbody = $.getdata('zqsszbody').replace(zqsszbody1 + "&", "");
-                    $.setdata(smbody, 'zqsszbody');
+                  
                     console.log("该搜索赚任务已自动删除")
                 }
             } catch (e) {
